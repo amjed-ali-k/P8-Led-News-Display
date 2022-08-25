@@ -5,7 +5,7 @@ from pydantic import AnyHttpUrl, BaseSettings, validator
 
 
 class Settings(BaseSettings):
-    PROJECT_NAME: str
+    # PROJECT_NAME: str
     # BACKEND_CORS_ORIGINS: List[AnyHttpUrl] = []
 
     # @validator("BACKEND_CORS_ORIGINS", pre=True)
@@ -16,7 +16,7 @@ class Settings(BaseSettings):
     #         return v
     #     raise ValueError(v)
 
-    DETA_KEY: str
+    DETA_PROJECT_KEY: str
 
     class Config:
         case_sensitive = True
