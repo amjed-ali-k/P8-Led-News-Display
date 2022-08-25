@@ -1,6 +1,6 @@
 
 from fastapi import APIRouter
-import requests, json, datetime, random
+import requests, datetime, random
 
 from app.models.otherweb import NewsApi, NewsinDB, ResponseNews
 from app.database import news_db
