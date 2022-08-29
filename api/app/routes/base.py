@@ -24,7 +24,7 @@ def get_latest_news():
     time_diff = (datetime.datetime.now() - updated_time)
     print(f'Cached for {time_diff.seconds}')
     if time_diff.seconds > 1 * 30 * 60:
-        return fetch_latest_news()
+        return fetch_new_news()
     return news_list.items
 
 @app.get("/")
@@ -34,7 +34,6 @@ def base_route():
 @app.get("/latest")
 def fetch_latest_news():
     return get_latest_news()
-
     
 @app.get("/random")
 def get_random_news():
